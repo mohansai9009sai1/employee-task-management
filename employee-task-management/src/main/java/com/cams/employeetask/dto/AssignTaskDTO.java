@@ -1,0 +1,34 @@
+package com.cams.employeetask.dto;
+
+import jakarta.validation.constraints.NotNull;
+
+public class AssignTaskDTO {
+	@NotNull
+	private Long taskId;
+	@NotNull
+	private Long employeeId;
+
+	public AssignTaskDTO() {
+	}
+
+	public AssignTaskDTO(Long taskId, Long employeeId) {
+		this.taskId = taskId;
+		this.employeeId = employeeId;
+	}
+
+	public Long getTaskId() {
+		return taskId;
+	}
+
+	public void setTaskId(Long taskId) {
+		this.taskId = taskId;
+	}
+
+	public Long getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(Long employeeId) {
+		this.employeeId = employeeId;
+	}
+}
