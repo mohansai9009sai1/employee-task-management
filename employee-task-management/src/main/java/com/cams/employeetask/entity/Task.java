@@ -8,13 +8,15 @@ public class Task {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private String title;
+	
 	@Column(length = 2000)
 	private String description;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TaskStatus status = TaskStatus.PENDING;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "assigned_to_id")
 	private Employee assignedTo;
